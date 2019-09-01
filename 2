@@ -16,4 +16,15 @@ echo "$c";
 Bn = B1*q^n-1; B60= 1*q^60-1 = 576 460 752 303 423 488;
 Якщо ми візьмемо 8 амеб, то отримаємо: Bn=8*q^n; q^n = Bn/8; q^n=576 460 752 303 423 488/8 = 720 575 940 379 279 36; n = 56 секунд
 Задача 4. Напишите несколько процедур или классов для работы с структурой из задания №1
-SELECT TABLE people (name, birthday,email, telephone) 
+CREATE DATABASE Information;
+CREATE TABLE people(
+name VARCHAR(30),
+birthday DATE,
+email TEXT,
+telephone TEXT
+);
+INSERT INTO people(name, birthday,email, telephone) VALUES
+('Ivan','1990-01-02','ivan@ukr.net','098-555-55-55'),
+('Sergey','1994-02-03','sergey@ukr.net','097-333-33-33'),
+('Maxim','1999-03-04','maxim@ukr.net','096-444-44-44');
+ALTER TABLE 'people' MODIFY COLUMN 'id' INT NOT NULL UNIQUE AUTO_INCREMENT FIRST;
